@@ -6,31 +6,36 @@
 :root {
 
     /* COLORS */
-    --primaryColor: gray;
-    --secondaryColor: lightGray;
-    --accentColor: lightSlateGray;
-    --interactableColor: darkSlateGrey;
-    --hoverButtonColor: dimGray;
-    --disableButtonColor: silver;
+    --primaryColor: #12785F;
+    --secondaryDarkColor: #E5DAC3;
+    --secondaryMiddleColor: #F4EFE7;
+    --secondaryLightColor: #F5F0E7;
+    --headerfooterColor: #392F2D;
+    --accentColor: #E49636;
+    --fruSoegaardDarkColor: #AF6E78;
+    --fruSoegaardLightColor: #E7D4D7;
+    --hrSoegaardDarkColor: #324780;
+    --hrSoegaardLightColor: #CAD2E5;
     --backgroundColor: whiteSmoke;
-    --baseTextDarkColor: black;
+    --baseTextDarkColor: #392F2D;
 
 
     /* TEXT  */
-    --titleSizeMobile: 2.5rem;
-    --baseTextSizeMobile: .9rem;
+    --lineheight: 1.4;
+    /* --titleSizeMobile: 2.5rem;
+    --baseTextSizeMobile: .9rem; */
 
     /* SPACING */
-    --smallSpacing: 10px;
-    --standardSpacing: 16px;
-    --mediumSpacing: 24px;
-    --largeSpacing: 35px;
-    --xLargeSpacing: 50px;
+    --sectionSpacing: 100px;
+    --headerToTextSpacing: 0px;
+    --rowSpacing: 130px;
+    --gapSpacing: 32px;
+
 
     /* DETAILS */
-    --borderRadius: 3px;
+    --borderRadius: 10px;
     --round: 50%;
-    --shadow: 3px 3px 8px gray;
+    --interactionShadow: 3px 3px 8px gray;
 }
 
 /* --- UTILLITIES --- */
@@ -48,9 +53,16 @@
 
 body {
     margin: 0;
+    line-height: var(--lineheight);
+    background-color: var(--backgroundColor);
 }
 
-main {}
+main {
+    display: grid;
+    grid-template-columns: 10% repeat(12, 1fr) 10%;
+    max-width: 1920px;
+    margin: auto;
+}
 
 section {}
 
@@ -69,9 +81,12 @@ h5,
 h6,
 p {
     grid-column: 2 / -2;
+
 }
 
-h1 {}
+h1 {
+    margin: var(--headerToTextSpacing);
+}
 
 h2 {}
 
@@ -79,6 +94,8 @@ h3 {}
 
 p {
     max-width: 75ch;
+    margin: var(--headerToTextSpacing);
+
 }
 
 /* --- BUTTONS --- */
