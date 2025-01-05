@@ -1,10 +1,11 @@
 // Definer Navbar-komponenten
-const baseUrl = "mmd3-soegaardsbryghus/" // update before upload, maybe
+const baseUrl = "mmd3-soegaardsbryghus" // update before upload, maybe
 const landingpage = "/";
 const fruSoegaard = "/frusoegaard.html"
 const hrSoegaard = "/hrsoegaard.html"
 const Navigation = {
     template: `
+    
       <nav>
         <ul>
           <li><a href="${baseUrl + landingpage}">Forside</a></li>
