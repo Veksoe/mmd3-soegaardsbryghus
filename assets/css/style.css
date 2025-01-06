@@ -163,7 +163,7 @@ a.btn:hover {
 
 /* --- HEADER --- */
 header {
-    background: linear-gradient(to Bottom, var(--headerfooterColor) 50%, rgba(0, 0, 0, 0));
+    background: linear-gradient(to Bottom, var(--headerfooterColor) 60%, rgba(0, 0, 0, 0));
     height: 150px;
     width: 100%;
     position: sticky;
@@ -466,12 +466,10 @@ footer .copyright {
     margin: 0;
 }
 
-
 .carousel a.btn {
     position: absolute;
     bottom: 60px;
 }
-
 
 .carousel img {
     width: 35%;
