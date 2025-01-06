@@ -1,5 +1,5 @@
 /* --- IMPORTS --- */
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=IM+Fell+French+Canon:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 /* --- VARIABLES --- */
@@ -46,6 +46,10 @@
     box-sizing: border-box;
 }
 
+.bold {
+    font-weight: 700;
+}
+
 .fullWidth {
     grid-column: 1/-1;
 }
@@ -65,7 +69,10 @@ main {
     margin: auto;
 }
 
-section {}
+section {
+    grid-column: 1/-1;
+    margin: var(--sectionSpacing) 0;
+}
 
 article {}
 
@@ -98,6 +105,7 @@ h1 {
     font-family: var(--headerFont);
     margin: var(--gapSpacing) var(--headerToTextSpacing) 0;
     font-weight: 400;
+    font-family: 1.8rem;
 
 }
 
@@ -105,7 +113,7 @@ h2 {
     font-family: var(--headerFont);
     margin: var(--gapSpacing) var(--headerToTextSpacing) 0;
     font-weight: 400;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 
 }
 
@@ -113,11 +121,11 @@ h3 {
     font-family: var(--headerFont);
     margin: 16px var(--headerToTextSpacing) 0;
     font-weight: 400;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 p {
-    max-width: 75ch;
+    max-width: 65ch;
     margin: 2px 0;
     font-family: var(--baseTextFont);
     font-size: 1.2rem;
@@ -136,12 +144,12 @@ a.btn {
     background: var(--primaryColor);
     border-radius: var(--borderRadius);
     box-shadow: var(--interactionShadow);
-    padding: 5px 16px;
-    color: var(--baseTextLightColor);
+    padding: 8px 16px;
+    min-width: 250px;
     text-decoration: none;
     transition: .3s;
-    font-family: var(--baseTextFont);
-
+    display: inline-block;
+    text-align: center;
 }
 
 header a.btn {
@@ -183,6 +191,11 @@ header {
     border-radius: var(--round);
     display: inline-block;
     margin-right: 5px;
+}
+
+header a.btn {
+    padding: 5px 16px;
+    min-width: unset;
 }
 
 .topnav {
@@ -369,6 +382,132 @@ footer .copyright {
     color: var(--baseTextLightColor);
     font-size: .8rem;
 
+}
+
+
+/* --- CAROUSEL --- */
+.carousel-container {
+    width: 100%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    height: 700px;
+
+}
+
+.carousel {
+    padding: 0 20%;
+}
+
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+}
+
+.carousel-slide.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.carousel-slide.inactive {
+    transform: scale(0.9);
+    opacity: 0.6;
+}
+
+.content {
+    display: flex;
+    gap: var(--gapSpacing);
+    justify-content: space-between;
+    align-items: center;
+    background: #FFF8F8;
+    box-shadow: 6px 14px 21px rgba(0, 0, 0, 0.24);
+    border-radius: var(--borderRadius);
+    height: 660px;
+}
+
+.carousel h2 {
+    font-family: "Handlee", serif;
+    font-size: 2.2rem;
+}
+
+.carousel p {
+    margin: 10px 0;
+}
+
+.carousel .text {
+    width: 100%;
+    margin: 60px 0 60px 60px;
+}
+
+.carousel .text div {
+    display: flex;
+    gap: var(--gapSpacing);
+    justify-content: space-between;
+}
+
+.carousel .season {
+    font-size: 1rem;
+    margin-top: 0;
+}
+
+.carousel .text .meal {
+    display: block;
+    margin: 10px 0;
+}
+
+.carousel .text .meal p {
+    margin: 0;
+}
+
+
+.carousel a.btn {
+    position: absolute;
+    bottom: 60px;
+}
+
+
+.carousel img {
+    width: 35%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0 var(--borderRadius) var(--borderRadius) 0;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 95%;
+    margin: 0 2.5%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-controls button {
+    background: var(--primaryColor);
+    border: none;
+    width: 125px;
+    height: 125px;
+    border-radius: var(--round);
+    color: white;
+    padding: 10px;
+    font-size: 60px;
+    box-shadow: var(--interactionShadow);
+    transition: .3s;
+}
+
+.carousel-controls button:hover {
+    filter: grayscale(40%);
+    transform: scale(.95);
 }
 
 /* --- HEADER --- */

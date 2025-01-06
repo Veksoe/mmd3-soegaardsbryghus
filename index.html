@@ -18,10 +18,16 @@
     <!-- Imports of Vue things -->
     <script src="https://cdn.jsdelivr.net/npm/vue@3.2.41/dist/vue.global.js"></script>
 
+
+
     <!-- Imports of components -->
     <script type="module" src="./assets/components/TheHeader.js"></script>
     <script type="module" src="./assets/components/BasicBtn.js"></script>
     <script type="module" src="./assets/components/TheFooter.js"></script>
+    <script type="module" src="./assets/components/Carousel.js"></script>
+
+
+
 
     <!-- Create Vue-applikationen -->
     <script type="module" src="./assets/javascript/app.js" defer></script>
@@ -38,11 +44,15 @@
             <h1>Welcome to our Restaurant!</h1>
             <p>some tekst</p>
             <div class="test"></div>
+            <section>
 
+                <Carousel></Carousel>
+            </section>
         </main>
 
         <the-footer></the-footer>
     </div>
+
 </body>
 
 </html>
