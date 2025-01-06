@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> <!--UPDATE-->
+<html lang="da">
 
 <head>
     <meta charset="UTF-8">
@@ -9,8 +9,9 @@
 
     <title>Document</title> <!--UPDATE-->
 
-    <link rel="icon" type="image/x-icon" href="./assets/img/"> <!-- UPDATE-->
+    <link rel="icon" type="image/x-icon" href="./assets/img/SB_logo_grøn.png">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Imports of Vue things -->
     <script src="https://cdn.jsdelivr.net/npm/vue@3.2.41/dist/vue.global.js"></script>
@@ -19,26 +20,21 @@
     <script type="module" src="./assets/components/TheHeader.js"></script>
     <script type="module" src="./assets/components/BasicBtn.js"></script>
 
+    <!-- Create Vue-applikationen -->
     <script type="module" src="./assets/javascript/app.js" defer></script>
 </head>
 
 <body>
     <div id="app">
 
-        <header>
-            <!-- Her vil navbaren blive indsat -->
-
-            <Navigation> </Navigation>
-            <Btn label="Læs mere"></Btn>
-            <Btn></Btn>
-            <Btn link="/frusoegaard.html" label="test"></Btn>
-        </header>
+        <Navigation></Navigation>
 
         <main>
             <!-- Din øvrige statiske indhold her -->
 
             <h1>Welcome to our Restaurant!</h1>
             <p>some tekst</p>
+            <div class="test"></div>
 
         </main>
 
