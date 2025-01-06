@@ -21,7 +21,6 @@
 
     <!-- Imports of components -->
     <script type="module" src="./assets/components/TheHeader.js"></script>
-    <script type="module" src="./assets/components/BasicBtn.js"></script>
     <script type="module" src="./assets/components/TheFooter.js"></script>
     <script type="module" src="./assets/components/Carousel.js"></script>
 
@@ -35,7 +34,7 @@
         <main class="landingpage">
             <section class="fullWidth hero">
                 <div class="imgContainer">
-                    <img src="./assets/img/heroImg.png" alt="">
+                    <img src="./assets/img/index/heroImg.png" alt="">
                     <div class="overlay"></div>
                 </div>
                 <div class="textContainer">
@@ -48,17 +47,73 @@
                 </div>
                 <div class="scrollIndicator"><i class="fa-solid fa-chevron-down"></i></div>
             </section>
-            <h1>Welcome to our Restaurant!</h1>
-            <p>some tekst</p>
-            <div class="test"></div>
             <section>
+                <div>
+                    <h1>To unikke oplevelser – Hr. og Fru. Søgaard</h1>
+                    <p>Søgaards Bryghus er delt op i to unikke oplevelser: Fru. Søgaard og Hr. Søgaard. Fru. Søgaard
+                        byder på en hyggelig caféoplevelse med et tilhørende bageri, mens Hr. Søgaard er en
+                        stemningsfuld gastropub. Fælles for begge steder er den samme høje kvalitet i menuen og
+                        servicen, men deres særpræg ligger i den fysiske opdeling og den unikke indretning, der
+                        kendetegner hver del.</p>
+                    <a href="./frusoegaard.html" class="btn fruBtn">Læs mere om Fru. Søgaard </a>
+                    <a href="./hrsoegaard.html" class="btn hrBtn">Læs mere om Hr. Søgaard </a>
+                </div>
+
+                <div class="introImgContainer">
+                    <img src="./assets/img/index/claus-serving-customers.jpg" alt="">
+                    <img src="./assets/img/Hr_sogaard_logo_gron_rundt.png" class="hrLogo" alt="">
+                    <img src="./assets/img/LOGO_FRUSØGAARD_RGB_2023.svg" class="fruLogo" alt="">
+                </div>
+            </section>
+            <section class="bryghusOverview">
+                <h1>Kom og oplev Søgaards Bryghus’</h1>
+                <div class="contentContainer">
+                    <a href="./frusoegaard.html">
+                        <img src="./assets/img/index/teacup.svg" alt="">
+                        <h3>Cafe</h3>
+                    </a>
+                    <a href="./hrsoegaard.html">
+                        <img src="./assets/img/index/plate.png" alt="">
+                        <h3>Gastropub</h3>
+                    </a>
+                    <a href="#">
+                        <img src="./assets/img/index/cake.svg" alt="">
+                        <h3>Bageri</h3>
+                    </a>
+                    <a href="#">
+                        <img src="./assets/img/index/barrel.png" alt="">
+                        <h3>Bryggeri</h3>
+                    </a>
+                    <a href="#">
+                        <img src="./assets/img/index/destilleri.png" alt="">
+                        <h3>Destilleri</h3>
+                    </a>
+                </div>
+            </section>
+            <section class="gallery">
+                <div class="imgContainer">
+                    <img src="./assets/img/index/pouring-beer.jpg" alt="">
+                </div>
+                <div class="imgContainer">
+                    <img src="./assets/img/drunken-beer-pot.jpg" alt="">
+
+                </div>
+                <div class="imgContainer">
+                    <img src="./assets/img/index/waiter.jpg" alt="">
+
+                </div>
+                <div class="imgContainer">
+                    <img src="./assets/img/index/heroImg.png" alt="">
+                </div>
+
+            </section>
+            <section class="fullWidth">
 
                 <Carousel></Carousel>
             </section>
         </main>
         <the-footer></the-footer>
     </div>
-
 </body>
 
 </html>
