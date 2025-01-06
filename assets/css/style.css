@@ -36,7 +36,7 @@
     /* DETAILS */
     --borderRadius: 10px;
     --round: 50%;
-    --interactionShadow: 3px 3px 8px rgb(27, 27, 27);
+    --interactionShadow: 3px 3px 5px #1b1b1b8a;
 }
 
 /* --- UTILLITIES --- */
@@ -69,9 +69,17 @@ section {}
 
 article {}
 
-a {}
+a {
+    font-family: var(--baseTextFont);
+    color: var(--baseTextLightColor);
 
-i {}
+}
+
+
+
+img {
+    max-width: 100%;
+}
 
 /* --- TEXT --- */
 h1,
@@ -88,27 +96,34 @@ p {
 h1 {
     margin: var(--headerToTextSpacing);
     font-family: var(--headerFont);
+    margin: var(--gapSpacing) var(--headerToTextSpacing) 0;
+    font-weight: 400;
+
 }
 
 h2 {
     font-family: var(--headerFont);
+    margin: var(--gapSpacing) var(--headerToTextSpacing) 0;
+    font-weight: 400;
+    font-size: 1.4rem;
 
 }
 
 h3 {
     font-family: var(--headerFont);
-
+    margin: 16px var(--headerToTextSpacing) 0;
+    font-weight: 400;
+    font-size: 1.2rem;
 }
 
 p {
     max-width: 75ch;
-    margin: var(--headerToTextSpacing);
+    margin: 2px 0;
     font-family: var(--baseTextFont);
+    font-size: 1.2rem;
 }
 
-img {
-    max-width: 100%;
-}
+
 
 /* --- BUTTONS --- */
 button {
@@ -173,9 +188,10 @@ header {
 .topnav {
     display: flex;
     justify-content: center;
+    gap: 32px;
 }
 
-.btnContainer {
+header .btnContainer {
     display: flex;
     gap: 5px;
 }
@@ -201,24 +217,21 @@ header {
     background-color: inherit;
     margin: 0;
     height: fit-content;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-family: var(--baseTextFont);
 }
 
 .dropdown {
     height: fit-content;
-
 }
 
-.active {
-    background-color: #04AA6D;
-    color: white;
+header .active {
+    text-decoration: underline;
 }
 
 .topnav .icon {
     display: none;
 }
-
 
 .dropdown-content {
     display: none;
@@ -238,12 +251,12 @@ header {
     text-decoration: none;
     display: block;
     text-align: left;
-    font-size: 1.3rem;
+    font-size: 1rem;
     border-radius: var(--borderRadius);
 
 }
 
-a.logo {
+header a.logo {
     width: 80px;
     height: 80px;
     margin-top: -10px;
@@ -262,8 +275,103 @@ a.logo {
 
 
 
+/* --- FOOTER --- */
+footer {
+    background: var(--headerfooterColor);
+    padding-bottom: var(--gapSpacing);
+}
+
+footer p {
+    font-size: 1rem;
+
+}
+
+footer .imgContainer {
+    display: flex;
+}
+
+footer .imgContainer img {
+    width: calc(100% / 4);
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+footer .contentContainer {
+    max-width: 1920px;
+    margin: auto;
+    color: var(--baseTextLightColor);
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .openingHours {
+    min-width: 250px;
+}
+
+footer .openingHours div {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    position: relative;
+    padding-top: 160px;
+}
+
+footer .logo {
+    width: 300px;
+    position: absolute;
+    top: -150px
+}
 
 
+footer .contact i {
+    margin-right: 5px;
+}
+
+footer .contact a {
+    margin: 2px 0;
+    display: inline-block;
+}
+
+footer .adress {
+    display: flex;
+    align-items: center;
+}
+
+footer .social {
+    font-size: 1.3rem;
+    display: flex;
+    gap: 16px;
+}
+
+footer .social i {
+    filter: drop-shadow(1px 1px 1px #1b1b1b8a);
+}
+
+footer .fruInsta {
+    color: var(--fruSoegaardDarkColor);
+}
+
+footer .hrInsta {
+    color: var(--hrSoegaardDarkColor);
+}
+
+footer .copyright {
+    margin: auto;
+    text-align: center;
+    color: var(--baseTextLightColor);
+    font-size: .8rem;
+
+}
+
+/* --- HEADER --- */
 @media screen and (max-width: 600px) {
 
     .topnav a:not(:first-child),

@@ -1,4 +1,4 @@
-// Definer Navbar-komponenten
+// Define the Navbar-component
 const landingpage = "index.html";
 const fruSoegaard = "frusoegaard.html"
 const hrSoegaard = "hrsoegaard.html"
