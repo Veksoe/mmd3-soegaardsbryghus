@@ -34,4 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollIndicator.classList.remove('hidden');
         }
     });
+
+    // Adds click event for scrollIndicator
+    scrollIndicator.addEventListener('click', () => {
+        window.scrollBy({
+            top: 700, // Moves 700px down
+            left: 0,
+            behavior: 'smooth' // Makes scroll smooth
+        });
+    });
+
+
 });
