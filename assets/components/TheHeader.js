@@ -20,7 +20,7 @@ const Navigation = {
             <nav class="topnav" id="myTopnav">
                 <div class="dropdown">
                     <button class="dropbtn">Søgaard
-                        <i class="fa fa-caret-down"></i>
+                        <i class="fa-solid fa-chevron-down"></i>
                     </button>
                     <div class="dropdown-content">
                         <a href="#">Bryghuset</a>
@@ -31,7 +31,7 @@ const Navigation = {
                 <a href="#news">Menukort</a>
                 <div class="dropdown">
                     <button class="dropbtn">Arrangementer
-                        <i class="fa fa-caret-down"></i>
+                        <i class="fa-solid fa-chevron-down"></i>
                     </button>
                     <div class="dropdown-content">
                         <a href="${selskaber}">Selvskaber</a>
