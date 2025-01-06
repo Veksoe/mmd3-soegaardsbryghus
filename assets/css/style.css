@@ -157,8 +157,8 @@ header a.btn {
 }
 
 a.btn:hover {
-    filter: grayscale(40%);
-    transform: scale(.95);
+    filter: contrast(150%);
+    transform: scale(1.05);
 }
 
 /* --- HEADER --- */
@@ -206,7 +206,7 @@ header a.btn {
 
 header .btnContainer {
     display: flex;
-    gap: 5px;
+    gap: 10px;
 }
 
 .btnContainer a.btn:nth-child(2) {
@@ -504,8 +504,8 @@ footer .copyright {
 }
 
 .carousel-controls button:hover {
-    filter: grayscale(40%);
-    transform: scale(.95);
+    filter: contrast(150%);
+    transform: scale(1.05);
 }
 
 /* --- HEADER --- */
