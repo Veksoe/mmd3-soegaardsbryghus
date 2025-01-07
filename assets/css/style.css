@@ -428,15 +428,16 @@ footer .copyright {
 .hero .imgContainer .overlay {
     background: rgba(0, 0, 0, 0.4);
     width: 100%;
-    height: 85vh;
+    height: 90vh;
     position: absolute;
     top: 0;
 }
 
 .landingpage .hero img {
-    height: 85vh;
+    height: 90vh;
     width: 100%;
     object-fit: cover;
+    border-radius: unset;
 }
 
 .landingpage .hero .textContainer {
@@ -484,7 +485,7 @@ footer .copyright {
 
 .scrollIndicator {
     position: absolute;
-    bottom: -50px;
+    bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
     background: var(--primaryColor);
@@ -664,7 +665,6 @@ footer .copyright {
 
 .carousel .text div p:nth-child(2) {
     min-width: 100px;
-    text-align: right;
 }
 
 .carousel .season {
@@ -761,10 +761,35 @@ footer .copyright {
 
 /* --- MOBILE --- */
 @media screen and (max-width: 1200px) {
+
     main {
         grid-template-columns: 15px repeat(4, 1fr) 15px;
     }
 
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: var(--gapSpacing);
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    /* --- HEADER --- */
     header {
         height: 120px;
         background: linear-gradient(to Bottom, var(--headerfooterColor) 55%, rgba(0, 0, 0, 0));
@@ -809,11 +834,8 @@ footer .copyright {
         transition: right 0.3s ease;
         z-index: 10;
         overflow-y: auto;
-        /* Gør det muligt at scrolle */
         max-height: 100%;
-        /* Sikrer, at menuen ikke strækker sig ud over vinduets højde */
-        box-sizing: border-box;
-        /* Tager padding med i højdeberegningen */
+
     }
 
     .topnavMobile .side-menu.open {
@@ -860,5 +882,148 @@ footer .copyright {
 
     .openIndicator {
         display: none;
+    }
+
+    /* --- HERO  --- */
+    .hero {
+        margin-top: -55px;
+    }
+
+    /* --- LANDINGPAGE --- */
+    .landingpage .hero h1 {
+        margin: 0 15px;
+        font-size: 3.4rem;
+    }
+
+    .landingpage .hero h2 {
+        font-size: 1.3rem;
+        margin-top: 5px;
+    }
+
+    .scrollIndicator {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+
+    .landingpage .intro {
+        flex-direction: column-reverse;
+    }
+
+    .landingpage .intro h1 {
+        margin: 0;
+    }
+
+    .landingpage .intro .btn {
+        margin: 5px 0;
+    }
+
+    .landingpage .introImgContainer {
+        margin: 15px 0;
+    }
+
+    .introImgContainer .hrLogo {
+        left: unset;
+        bottom: unset;
+        right: 0;
+        top: -50px;
+        width: 130px;
+        height: 130px;
+    }
+
+    .introImgContainer .fruLogo {
+        left: 0;
+        bottom: unset;
+        top: -50px;
+        width: 130px;
+        height: 130px;
+    }
+
+    .gallery {
+        flex-direction: row;
+        height: 200px;
+        gap: 10px;
+    }
+
+
+    .gallery .imgContainer {
+        height: 150px;
+        width: calc(100% / 4 - 10px);
+    }
+
+    .bryghusOverview {
+        margin-bottom: 100px;
+    }
+
+    .bryghusOverview h3 {
+        font-size: 1rem;
+        margin: 0 auto;
+    }
+
+    .bryghusOverview .contentContainer {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px 45px;
+        margin: 0;
+    }
+
+    .bryghusOverview img {
+        height: 70px;
+        border-radius: unset;
+    }
+
+    .carousel-container {
+        height: 800px;
+    }
+
+    .carousel {
+        padding: 0 15px;
+    }
+
+    .carousel .content {
+        flex-direction: column-reverse;
+        gap: 15px;
+        justify-content: start;
+        height: 770px;
+    }
+
+    .carousel img {
+        width: 100%;
+        height: 30%;
+        border-radius: var(--borderRadius) var(--borderRadius) 0 0;
+    }
+
+    .carousel .text {
+        margin: 0 30px;
+        width: unset;
+    }
+
+    .carousel .text div p:nth-child(2) {
+        min-width: 70px;
+    }
+
+    .carousel h2 {
+        font-size: 2rem;
+    }
+
+    .carousel .text div {
+        align-items: center;
+    }
+
+    .carousel a.btn {
+        bottom: 40px;
+    }
+
+    .carousel-controls {
+        bottom: -25px;
+        top: unset;
+        width: 50%;
+        margin: 0 25%;
+    }
+
+    .carousel-controls button {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
     }
 }

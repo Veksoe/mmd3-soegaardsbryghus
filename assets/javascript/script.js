@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const burgerMenu = document.querySelector('#burgerMenu');
     const sideMenu = document.querySelector('#sideMenu');
     const closeMenu = document.querySelector('#closeMenu');
-    const changeTextEl = document.querySelector('changingTextContainer');
+    const changeTextEl = document.querySelector('.changingTextContainer');
     const navLinks = document.querySelectorAll('.topnav a, .topnavMobile  a ');
 
 
@@ -17,8 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Call changeText function every 8th second
         setInterval(changeText, 6000);
     }
-
-
 
     // Loop through each link and add .active to the matching link(s)
     navLinks.forEach(link => {
@@ -66,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Adds click event for scrollIndicator
         scrollIndicator.addEventListener('click', () => {
             window.scrollBy({
-                top: 700, // Moves 700px down
+                top: 600, // Moves 700px down
                 left: 0,
                 behavior: 'smooth' // Makes scroll smooth
             });
