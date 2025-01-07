@@ -7,10 +7,12 @@
     <meta name="description" content="-"> <!--UPDATE-->
     <meta name="keywords" content="-"> <!--UPDATE-->
 
-    <title>Document</title> <!--UPDATE-->
+    <title>Fru. Søgaard - Søgaards Bryghus</title> <!--UPDATE-->
 
     <link rel="icon" type="image/x-icon" href="./assets/img/SB_logo_grøn.png">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/javascript/script.js" defer></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -20,8 +22,9 @@
 
     <!-- Imports of components -->
     <script type="module" src="./assets/components/TheHeader.js"></script>
-    <script type="module" src="./assets/components/BasicBtn.js"></script>
     <script type="module" src="./assets/components/TheFooter.js"></script>
+    <script type="module" src="./assets/components/Hero.js"></script>
+    <script type="module" src="./assets/components/FEPImageWithTextbox.js"></script>
 
 
     <!-- Create Vue-applikationen -->
@@ -30,13 +33,80 @@
 
 <body>
     <div id="app">
-        <!-- Her vil navbaren blive indsat -->
         <Navigation></Navigation>
 
-        <main>
+        <main class="fru">
+            <hero-component :image-url="'./assets/img/fru-soegaard/heroImg.jpg'"
+                :alt-text="'Hero image'"></hero-component>
 
-            <!-- Din øvrige statiske indhold her -->
-            <h1>Fru. Søgaard!</h1>
+            <section class="intro">
+                <div class="introImgContainer">
+                    <img src="./assets/img/fru-soegaard/two-women-laughing.jpg" alt="">
+                    <img src="./assets/img/LOGO_FRUSØGAARD_RGB_2023.svg" class="fruLogo" alt="">
+                </div>
+                <div>
+                    <h1>Fru. Søgaard</h1>
+                    <p>Fru. Søgaard er vores cafe-del af Søgaards Bryghus og det er i disse omgivelser, at vi kan
+                        tilbyde dig vores særlige smagsoplevelser i form af friskbagt brød og de flotte kager. Også her
+                        er øllet i fokus, da det bliver brugt i både brød og kager. Den lækre cafe blev tilføjet huset i
+                        2019, og repræsentere Lisas og Carolines personligheder. </p>
+                </div>
+            </section>
+
+            <section class="fruOverview">
+                <h1>Fru. Søgaard tilbyder</h1>
+                <div class="contentContainer">
+                    <article href="./frusoegaard.html">
+                        <img src="./assets/img/fru-soegaard/cozy-sittingarea.png" alt="">
+                        <h3 class="bold">Hygge og æstetik</h3>
+                        <p>Vi prioriterer hygge og hjemlig æstetik.</p>
+                    </article>
+                    <article href="./hrsoegaard.html">
+                        <img src="./assets/img/fru-soegaard/cake-from-disk.jpg" alt="">
+                        <h3 class="bold">Friskbagt surdejsbrød</h3>
+                        <p> Lavet med råvare i allerhøjeste kvalitet.</p>
+                    </article>
+                    <article>
+                        <img src="./assets/img/fru-soegaard/party-cakes.png" alt="">
+                        <h3 class="bold">Sirlige konditorkage</h3>
+                        <p>Lavet med omhu af vores dygtige konditor.</p>
+                    </article>
+                </div>
+            </section>
+            <section class="bentoBox">
+                <div class="infobox">
+                    <h2>Cafe med øl i centrum</h2>
+                    <p> Vi har naturligvis bibeholdt den røde tråd i huset, som er vort øl og spiritus. Dette er at
+                        finde i vores retter, brød, kage.</p>
+                    <a href="#" class="btn fruBtn">Se hele menuen</a>
+                </div>
+                <img src="./assets/img/fru-soegaard/smooties.jpg" class="img1" alt="">
+                <img src="./assets/img/fru-soegaard/youngster-eating.jpg" class="img2" alt="">
+                <img src="./assets/img/fru-soegaard/women-looking-at-cups.jpg" class="img3" alt="">
+                <img src="./assets/img/fru-soegaard/plate-of-food.jpg" class="img4" alt="">
+                <img src="./assets/img/fru-soegaard/mojito.jpg" class="img5" alt="">
+            </section>
+            <section class="collageImgSect">
+                <div class="imgContainer">
+                    <img src="./assets/img/fru-soegaard/waiter-walking.jpg" alt="">
+                    <img src="./assets/img/fru-soegaard/red-nuanced-sittingarea.jpg" alt="">
+                </div>
+                <div>
+                    <h1>Unikke rammer og smagfulde minder</h1>
+                    <p>Når du træder ind på Fru Søgaards bageri og spisested, træder du ind i unikke, men hjemlige og
+                        indbydende rammer. Vi ser værdi i, at vores gæster får en mindeværdig oplevelse. Det gælder ikke
+                        kun gennem vores menu, men også vores finurlige æstetik med fokus på det enestående. </p>
+                    <p>Både hos Fru Søgaard og Hr. Søgaard er vi stolte af vores uformelle tone og vores passion for at
+                        skabe noget specielt. Det, mener vi, er en charmerende del af det at drive et familieejet
+                        foretagende som vores. </p>
+                </div>
+            </section>
+
+            <F-E-P-Img-With-Text :image-url="'./assets/img/fru-soegaard/cake-from-disk.jpg'"
+                :image-alt="'bakery.imageAlt'" :heading="'Bageri'"
+                :description="'Vi har et stort udvalg af lækre kager og brød, alle bagt med kærlighed og kreativitet af vores dygtige konditor. Fra klassiske favoritter til unikke sæsonspecialiteter'"
+                :link-text="'Læs mere om bageriet'" :link-href="'#'" :extra-classes="'fruBtn'">
+            </F-E-P-Img-With-Text>
         </main>
 
         <the-footer></the-footer>

@@ -34,7 +34,7 @@ const Navigation = {
                         <i class="fa-solid fa-chevron-down"></i>
                     </button>
                     <div class="dropdown-content">
-                        <a href="${selskaber}">Selvskaber</a>
+                        <a href="${selskaber}">Selskaber</a>
                         <a href="#">Hele Svineriet</a>
                         <a href="#">Ølsmagning</a>
                         <a href="#">Øl med hjem</a>
@@ -79,7 +79,7 @@ const Navigation = {
                         <i class="fa-solid fa-chevron-down"></i>
                     </button>
                     <div class="dropdown-content">
-                        <a href="${selskaber}">Selvskaber</a>
+                        <a href="${selskaber}">Selskaber</a>
                         <a href="#">Hele Svineriet</a>
                         <a href="#">Ølsmagning</a>
                         <a href="#">Øl med hjem</a>

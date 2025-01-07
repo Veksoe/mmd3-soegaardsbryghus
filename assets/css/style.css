@@ -92,6 +92,17 @@ img {
     border-radius: var(--borderRadius);
 }
 
+.collageImgSect .imgContainer {
+    display: flex;
+    gap: var(--gapSpacing);
+    height: 600px;
+    align-items: center;
+}
+
+.collageImgSect .imgContainer img:nth-child(2) {
+    margin-top: 125px;
+}
+
 /* --- TEXT --- */
 h1 {
     margin: var(--headerToTextSpacing);
@@ -410,13 +421,45 @@ footer .copyright {
     text-align: center;
     color: var(--baseTextLightColor);
     font-size: .8rem;
+}
 
+/* --- FEP WITH IMG AND TEXT  --- */
+.fep {
+    grid-template-columns: unset;
+    position: relative;
+    width: 100%;
+}
+
+.fep .textContainer {
+    position: absolute;
+    background: var(--secondaryLightColor);
+    border-radius: var(--borderRadius);
+    padding: 50px;
+    width: 600px;
+}
+
+.fep .imgContainer {
+    width: 80%;
+    height: 100%;
+}
+
+.fep img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 /* --- HERO --- */
 .hero {
     margin-top: -65px;
     position: relative;
+}
+
+.hero img {
+    border-radius: unset;
+    height: 40vh;
+    width: 100%;
+    object-fit: cover;
 }
 
 .hero .imgContainer {
@@ -428,16 +471,20 @@ footer .copyright {
 .hero .imgContainer .overlay {
     background: rgba(0, 0, 0, 0.4);
     width: 100%;
-    height: 90vh;
+    height: 40vh;
     position: absolute;
     top: 0;
+}
+
+.landingpage .hero .imgContainer .overlay {
+    height: 90vh;
+
 }
 
 .landingpage .hero img {
     height: 90vh;
     width: 100%;
     object-fit: cover;
-    border-radius: unset;
 }
 
 .landingpage .hero .textContainer {
@@ -507,7 +554,7 @@ footer .copyright {
     pointer-events: none;
 }
 
-/* --- LANDINGPAGE SECTIONS --- */
+/* --- LANDINGPAGE  --- */
 .landingpage .introImgContainer {
     position: relative;
 }
@@ -520,12 +567,12 @@ footer .copyright {
     position: absolute;
 }
 
-.hrLogo {
+.landingpage .hrLogo {
     bottom: 70px;
     left: -100px;
 }
 
-.fruLogo {
+.landingpage .fruLogo {
     bottom: -40px;
     left: -10px;
 }
@@ -721,6 +768,107 @@ footer .copyright {
 .carousel-controls button:hover {
     filter: contrast(150%);
     transform: scale(1.05);
+}
+
+
+/* --- FRU. SØGAARD --- */
+.fru .introImgContainer {
+    position: relative;
+}
+
+.fru .intro .fruLogo {
+    bottom: -20px;
+    right: -60px;
+}
+
+.fruOverview {
+    grid-template-columns: unset;
+    text-align: center;
+    gap: var(--gapSpacing);
+}
+
+.fruOverview .contentContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.fruOverview article {
+    max-width: 260px;
+}
+
+.fruOverview h3 {
+    font-family: var(--baseTextFont)
+}
+
+.fruOverview p {
+    margin-top: 05px;
+}
+
+.fruOverview img {
+    width: 260px;
+    height: 260px;
+    border-radius: var(--round);
+    object-fit: cover;
+}
+
+.fru .bentoBox {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 0;
+}
+
+.fru .bentoBox .infobox {
+    grid-column: 1/3;
+    grid-row: span 2;
+    background: var(--fruSoegaardLightColor);
+    border-radius: var(--borderRadius);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.fru .bentoBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fru .bentoBox .img1 {
+    grid-column: 3/4;
+    grid-row: 1;
+}
+
+.fru .bentoBox .img2 {
+    grid-column: 4/6;
+}
+
+.fru .bentoBox .img3 {
+    grid-column: 3/5;
+}
+
+.fru .bentoBox .img4 {
+    grid-column: 5/6;
+}
+
+.fru .bentoBox .img5 {
+    grid-column: -2/-1;
+    grid-row: 1/-1;
+}
+
+.fru .fep .textContainer {
+    right: 0;
+    background: var(--fruSoegaardLightColor);
+}
+
+.fru .collageImgSect img {
+    width: 50%;
+    height: 450px;
+    object-fit: cover;
+
 }
 
 /* --- ANIMATIONS --- */
