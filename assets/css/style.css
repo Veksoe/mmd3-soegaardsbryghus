@@ -884,6 +884,34 @@ footer .copyright {
         display: none;
     }
 
+    /* --- FOOTER  --- */
+
+    footer .contentContainer {
+        flex-direction: column;
+    }
+
+    footer .logo {
+        display: none;
+    }
+
+    footer .openingHours,
+    footer .links,
+    footer .contact {
+        margin-top: 25px;
+    }
+
+    footer .links {
+        padding: 0;
+        margin: 25px 0;
+        align-items: start;
+    }
+
+
+
+    footer h2 {
+        margin: 0;
+    }
+
     /* --- HERO  --- */
     .hero {
         margin-top: -55px;
