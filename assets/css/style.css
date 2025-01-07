@@ -1082,6 +1082,10 @@ footer .copyright {
         top: 150px;
     }
 
+    footer .imgContainer img {
+        height: 100px;
+    }
+
     .fep h2 {
         margin: 0;
     }
