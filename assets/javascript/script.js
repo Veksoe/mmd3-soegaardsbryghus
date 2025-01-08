@@ -87,4 +87,23 @@ document.addEventListener('DOMContentLoaded', () => {
             sideMenu.classList.remove('open');
         }
     });
+
+
+    const logoLink = document.querySelector("a.logo");
+    const logoImage = logoLink.querySelector("img");
+
+    logoLink.addEventListener("click", (e) => {
+        e.preventDefault(); // Forhindr øjeblikkelig navigation
+
+        document.body.classList.add("no-scroll");
+        // Tilføj 'expand' klasse til både link og billede
+        logoLink.classList.add("expand");
+        logoImage.classList.add("expand");
+
+        // Vent på animationens afslutning, før vi navigerer
+        setTimeout(() => {
+            document.body.classList.remove("no-scroll");
+            window.location.href = logoLink.href; // Naviger til forsiden
+        }, 1000); // Matcher transitionens længste varighed
+    });
 });
