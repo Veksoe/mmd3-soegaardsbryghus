@@ -502,6 +502,7 @@ footer .copyright {
 .hero {
     margin-top: -65px;
     position: relative;
+    overflow: hidden;
 }
 
 .hero img {
@@ -527,7 +528,6 @@ footer .copyright {
 
 .landingpage .hero .imgContainer .overlay {
     height: 90vh;
-
 }
 
 .landingpage .hero img {
@@ -658,7 +658,7 @@ footer .copyright {
 }
 
 .bryghusOverview a:hover img {
-    animation: float 2s ease-in-out infinite;
+    animation: click 1s ease-in-out infinite;
 
 }
 
@@ -813,11 +813,17 @@ footer .copyright {
     font-size: 60px;
     box-shadow: var(--interactionShadow);
     transition: .3s;
+    min-width: unset;
+
 }
 
 .carousel-controls button:hover {
     filter: contrast(150%);
     transform: scale(1.05);
+}
+
+.carousel-controls button:active {
+    transform: scale(.95);
 }
 
 
@@ -997,8 +1003,8 @@ footer .copyright {
 }
 
 .olsmagspakker {
-    width: 60%;
-    margin-left: 40%;
+    width: 50%;
+    margin-left: 50%;
 }
 
 .olsmagspakker article {
@@ -1010,6 +1016,12 @@ footer .copyright {
 .olsmagspakker .btnContainer {
     margin-right: 15px;
     width: 250px;
+}
+
+.btnContainer .active {
+    filter: contrast(150%);
+    transform: scale(1.05);
+    transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .olsmagspakker .btnContainer button {
@@ -1027,13 +1039,40 @@ footer .copyright {
     justify-content: center;
     width: 100%;
     height: 100%;
+    position: relative;
+}
+
+.article-content {
+    position: absolute;
+    width: 80%;
+    opacity: 0;
+    transform: scale(0);
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    display: none;
+}
+
+.article-content.active {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.article-content.appearing {
+    animation-name: appear;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+.article-content.disappearing {
+    animation-name: disappear;
+    animation-duration: .7s;
+    animation-fill-mode: forwards;
 }
 
 .olsmagspakker p {
     color: var(--baseTextLightColor);
 }
-
-
 
 .beerwalk a {
     color: var(--hrSoegaardDarkColor);
@@ -1042,7 +1081,6 @@ footer .copyright {
 
 
 /* --- ANIMATIONS --- */
-
 @keyframes bounce {
 
     0%,
@@ -1062,20 +1100,43 @@ footer .copyright {
     }
 }
 
-@keyframes float {
+@keyframes click {
     0% {
-        transform: translateY(0);
+        transform: scale(1);
     }
 
-    50% {
-        transform: translateY(-10px);
+    40% {
+        transform: scale(.93);
     }
 
     100% {
-        transform: translateY(0);
+        transform: scale(1);
     }
 }
 
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
 
 /* --- MOBILE --- */
 @media screen and (max-width: 1000px) {

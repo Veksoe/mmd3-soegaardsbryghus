@@ -106,21 +106,62 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = logoLink.href; // Naviger til forsiden
         }, 1000); // Matcher transitionens længste varighed
     });
-});
 
-// ØLSMAGNING KNAP TIL AT VISE INDHOLD*//
-document.querySelectorAll('.olsmagspakker .btnContainer button').forEach(button => {
-    button.addEventListener('click', () => {
-        // Skjul alle artikler
-        document.querySelectorAll('.article-content').forEach(article => {
-            article.style.display = 'none';
+    // ØLSMAGNING
+    document.querySelectorAll('.olsmagspakker .btnContainer button').forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active from all classes when btn is clicked
+            document.querySelectorAll('.olsmagspakker .btnContainer button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Adds active to clicked btn
+            button.classList.add('active');
+
+            // Find  the visible article
+            const visibleArticle = document.querySelector('.article-content.active');
+            const targetClass = button.getAttribute('data-target');
+            const targetArticle = document.querySelector(`.${targetClass}`);
+
+            // Get previous shown article
+            if (visibleArticle !== targetArticle) {
+                if (visibleArticle) {
+                    // Reset classes
+                    visibleArticle.classList.remove('active', 'appearing', 'disappearing');
+                    // Add disappearing class
+                    visibleArticle.classList.add('disappearing');
+                    // Listen for the animation to end
+                    visibleArticle.addEventListener('animationend', function handleDisappear() {
+                        visibleArticle.classList.remove('disappearing');
+                        // Reset styles so animations will play correctly later
+                        visibleArticle.style.opacity = '0';
+                        visibleArticle.style.transform = 'scale(0)';
+                        // Remove the event listener
+                        visibleArticle.removeEventListener('animationend', handleDisappear);
+                    });
+                }
+
+                setTimeout(() => { // Show the selcted article by making it invisble but in the flow
+                    targetArticle.style.opacity = '0';
+                    targetArticle.style.transform = 'scale(0)';
+                    targetArticle.style.display = 'block';
+
+                    targetArticle.classList.add('appearing');
+                    // Listen for the animation to end
+                    targetArticle.addEventListener('animationend', function handleAppear() {
+                        targetArticle.classList.remove('appearing');
+                        targetArticle.classList.add('active');
+                        // Reset styles so animations will play correctly later
+                        targetArticle.style.opacity = '1';
+                        targetArticle.style.transform = 'scale(1)';
+                        // Remove the event listener
+                        targetArticle.removeEventListener('animationend', handleAppear);
+                    });
+                }, 200)
+            }
         });
-
-        // Vis den artikel, der svarer til den trykkede knap
-        const target = button.getAttribute('data-target');
-        const articleToShow = document.querySelector(`.${target}`);
-        if (articleToShow) {
-            articleToShow.style.display = 'block';
-        }
     });
+
+
+
 });
