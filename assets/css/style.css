@@ -49,6 +49,10 @@
     font-weight: 700;
 }
 
+.italic {
+    font-style: italic;
+}
+
 .fullWidth {
     grid-column: 1/-1;
 }
@@ -139,13 +143,13 @@ h3 {
     color: var(--baseTextDarkColor);
 }
 
-h4{
+h4 {
     max-width: 65ch;
-    margin: 15px 0;
+    margin: 16px var(--headerToTextSpacing) 0;
     font-family: var(--baseTextFont);
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--baseTextLightColor);
-    line-height: 1.5; 
+    line-height: 1.5;
 }
 
 p {
@@ -167,7 +171,8 @@ button {
 
 }
 
-a.btn, button {
+a.btn,
+button {
     background: var(--primaryColor);
     border-radius: var(--borderRadius);
     box-shadow: var(--interactionShadow);
@@ -184,9 +189,15 @@ header a.btn {
     font-size: .9rem;
 }
 
-a.btn:hover {
+a.btn:hover,
+button:hover {
     filter: contrast(150%);
     transform: scale(1.05);
+}
+
+a.btn:active,
+button:active {
+    transform: scale(.95);
 }
 
 a.btn.fruBtn {
@@ -811,11 +822,13 @@ footer .copyright {
 
 
 /* --- FRU. SØGAARD --- */
-.fru .introImgContainer, .hr .introImgContainer{
+.fru .introImgContainer,
+.hr .introImgContainer {
     position: relative;
 }
 
-.fru .intro .fruLogo, .hr .intro .hrLogo{
+.fru .intro .fruLogo,
+.hr .intro .hrLogo {
     position: absolute;
     bottom: -20px;
     right: -60px;
@@ -824,36 +837,42 @@ footer .copyright {
 }
 
 
-.fruOverview, .hrOverview{
+.fruOverview,
+.hrOverview {
     grid-template-columns: unset;
     text-align: center;
     gap: var(--gapSpacing);
 }
 
-.fruOverview .contentContainer, .hrOverview .contentContainer  {
+.fruOverview .contentContainer,
+.hrOverview .contentContainer {
     display: flex;
     justify-content: space-between;
     padding: 0 100px;
 }
 
-.hrOverview .contentContainer{
+.hrOverview .contentContainer {
     padding: 0;
     gap: 15px;
 }
 
-.fruOverview article, .hrOverview article {
+.fruOverview article,
+.hrOverview article {
     max-width: 260px;
 }
 
-.fruOverview h3, .hrOverview h3 {
+.fruOverview h3,
+.hrOverview h3 {
     font-family: var(--baseTextFont)
 }
 
-.fruOverview p, .hrOverview p {
+.fruOverview p,
+.hrOverview p {
     margin-top: 05px;
 }
 
-.fruOverview img, .hrOverview img{
+.fruOverview img,
+.hrOverview img {
     width: 250px;
     height: 250px;
     border-radius: var(--round);
@@ -913,14 +932,16 @@ footer .copyright {
     background: var(--fruSoegaardLightColor);
 }
 
-.hr .fep .textContainer{
+.hr .fep .textContainer {
     background: var(--hrSoegaardLightColor);
 }
-.hr .fep .imgContainer{
-margin-left: 20%;
+
+.hr .fep .imgContainer {
+    margin-left: 20%;
 }
 
-.fru .collageImgSect img, .hr .collageImgSect img {
+.fru .collageImgSect img,
+.hr .collageImgSect img {
     width: 50%;
     height: 450px;
     object-fit: cover;
@@ -930,116 +951,91 @@ margin-left: 20%;
 
 
 .hr .hrMenu {
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
 }
 
-.hr .hrMenu .imgContainer{
+.hr .hrMenu .imgContainer {
     display: flex;
     gap: var(--gapSpacing);
     margin: var(--gapSpacing);
 }
 
-.hr .hrMenu .imgContainer img{
-   width: calc(100% / 3 - 32px);
-   height: 550px;
-   object-fit: cover;
+.hr .hrMenu .imgContainer img {
+    width: calc(100% / 3 - 32px);
+    height: 550px;
+    object-fit: cover;
 }
+
 /* --- ØLSMAGNING --- */
 
-.olsmagning .collageImgSect .imgContainer{
+.olsmagning .collageImgSect .imgContainer {
     flex-direction: column;
 }
 
-.olsmagning .collageImgSect .imgContainer img{
+.olsmagning .collageImgSect .imgContainer img {
     width: 650px;
     height: 250px;
     object-fit: cover;
-
 }
 
 .olsmagning .collageImgSect .imgContainer img:nth-child(2) {
     margin-top: 0;
-    margin-right: 150px ;
+    margin-right: 150px;
 
 }
-.olsmagspakken {
-    position: relative; 
-    z-index: 1; 
-}
 
-/* .olsmagspakken {
-    background-image: url('/assets/img/olsmagning/clausTesteren.png');
+.olsmagning .olsmagspakkenContainer {
+    background-image: url("../img/olsmagning/clausTesteren.png");
+    grid-template-columns: unset;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 80vh;
-    width: 100vw;
-    margin: 0;
-    display: grid;
-    grid-column: 1 / -2;
-    position: relative; 
-    z-index: -1; 
-} */
+    height: 700px;
 
-.olsmagspakkenHeroimg{
-   width: 200vh;
 }
 
-.olsmagspakken article {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: relative;
-    z-index: 2; 
+.olsmagspakker {
+    width: 60%;
+    margin-left: 40%;
 }
 
-.olsmagspakken ul.button {
-    list-style-type: none;
+.olsmagspakker article {
     display: flex;
-    flex-direction: column;
-    margin-right: 2rem;
-    position: relative;
     align-items: center;
+    height: 400px;
 }
 
-.olsmagspakken button{
-    margin-bottom: 1rem;
-  
+.olsmagspakker .btnContainer {
+    margin-right: 15px;
+    width: 250px;
 }
 
-
-
-.gulboks {
-    background-color: var(--accentColor);
-    padding: 1rem;
-    border-radius: var(--borderRadius);
-    color: var(--secondaryLightColor);
-    flex-grow: 1;
-    width: 25rem;
-    position: relative;
-}
-
-.lilleclaus, .storeclaus, .planken, .testeren {
-    display: none;
-}
-
-.lilleclaus {
-    display: block; 
-}
-
-.olsmagspakken p{
-    color: var(--baseTextLightColor);
+.olsmagspakker .btnContainer button {
+    margin: 15px 0;
     font-size: 1rem;
 }
 
-.pris{
-    font-weight: bold;
-    font-style: italic;
+.gulboks {
+    background: var(--accentColor);
+    padding: var(--gapSpacing);
+    border-radius: var(--borderRadius);
+    color: var(--secondaryLightColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
-.beerwalk a{
+.olsmagspakker p {
+    color: var(--baseTextLightColor);
+}
+
+
+
+.beerwalk a {
     color: var(--hrSoegaardDarkColor);
     text-decoration: underline;
 }
@@ -1206,9 +1202,11 @@ flex-direction: column;
         margin-left: 15px;
     }
 
-    .dropdown .dropbtn, .dropdown .dropdown-content a{
+    .dropdown .dropbtn,
+    .dropdown .dropdown-content a {
         text-align: left;
     }
+
     .openIndicator {
         display: none;
     }
@@ -1411,24 +1409,28 @@ flex-direction: column;
     }
 
     /* --- FRU. SØGAARD --- */
-    .fru .intro .fruLogo, .hr .intro .hrLogo {
+    .fru .intro .fruLogo,
+    .hr .intro .hrLogo {
         bottom: -50px;
         right: 0;
         width: 130px;
         height: 130px;
     }
 
-    .fruOverview .contentContainer, .hrOverview .contentContainer{ 
+    .fruOverview .contentContainer,
+    .hrOverview .contentContainer {
         padding: 0;
         flex-direction: column;
         gap: 15px;
     }
 
-    .fruOverview h3, .hrOverview h3 {
+    .fruOverview h3,
+    .hrOverview h3 {
         margin-top: 0;
     }
 
-    .fruOverview img, .hrOverview img {
+    .fruOverview img,
+    .hrOverview img {
         border-radius: var(--round);
         object-fit: cover;
     }
@@ -1487,22 +1489,22 @@ flex-direction: column;
         display: none;
     }
 
-    .hr .hrMenu .imgContainer img{
+    .hr .hrMenu .imgContainer img {
         border-radius: 5px;
         width: calc(100% / 3 - 5px);
         height: 200px;
     }
 
-    .hr .hrMenu .imgContainer{
+    .hr .hrMenu .imgContainer {
         gap: 5px;
         margin: 0;
 
     }
 
-   .hr .fep .imgContainer{
+    .hr .fep .imgContainer {
         margin-left: 0;
     }
 
     /* --- ØLSMAGNING --- */
-    
+
 }
