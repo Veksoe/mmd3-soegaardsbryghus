@@ -1,6 +1,4 @@
-const { defineComponent } = Vue;
-
-const Carousel = defineComponent({
+const Carousel = {
     template: `
         <div class="carousel-container">
             <div class="carousel" ref="carouselWrapper">
@@ -93,6 +91,6 @@ const Carousel = defineComponent({
             this.currentSlide = (this.currentSlide - 1 + 4) % 4;
         }
     }
-});
+};
 
-export { Carousel }
+export { Carousel };

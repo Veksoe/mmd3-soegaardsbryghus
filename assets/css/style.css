@@ -127,7 +127,7 @@ h2 {
     font-size: 1.6rem;
     line-height: 1.7rem;
     color: var(--baseTextDarkColor);
-
+    margin: 0 0 1rem 3rem;
 }
 
 h3 {
@@ -137,6 +137,15 @@ h3 {
     font-size: 1.4rem;
     line-height: 1.5rem;
     color: var(--baseTextDarkColor);
+}
+
+h4{
+    max-width: 65ch;
+    margin: 15px 0;
+    font-family: var(--baseTextFont);
+    font-size: 1rem;
+    color: var(--baseTextLightColor);
+    line-height: 1.5; 
 }
 
 p {
@@ -154,10 +163,11 @@ p {
 button {
     cursor: pointer;
     font-family: var(--baseTextFont);
+    border: none;
 
 }
 
-a.btn {
+a.btn, button {
     background: var(--primaryColor);
     border-radius: var(--borderRadius);
     box-shadow: var(--interactionShadow);
@@ -166,6 +176,8 @@ a.btn {
     transition: .3s;
     display: inline-block;
     text-align: center;
+    color: var(--baseTextLightColor);
+    margin: 10px 15px 10px 0;
 }
 
 header a.btn {
@@ -237,7 +249,7 @@ header a.btn {
 .topnav {
     display: flex;
     justify-content: center;
-    gap: 32px;
+    gap: 10px;
 }
 
 header .btnContainer {
@@ -264,7 +276,7 @@ header .btnContainer {
     border: none;
     margin: 0;
     height: fit-content;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-family: var(--baseTextFont);
     transition: .3s;
 
@@ -272,11 +284,13 @@ header .btnContainer {
 
 .dropdown .dropbtn {
     background-color: inherit;
+    box-shadow: none;
 
 }
 
 .dropdown {
     height: fit-content;
+    position: relative;
 }
 
 header .active {
@@ -290,8 +304,9 @@ header .active {
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 90px;
-    background: var(--secondaryLightColor);
+    top: 40px;
+    left: 12px;
+    background: var(--headerfooterColor);
     min-width: 160px;
     box-shadow: var(--interactionShadow);
     z-index: 1;
@@ -300,10 +315,11 @@ header .active {
 
 .dropdown-content a {
     float: none;
-    color: var(--baseTextDarkColor);
-    padding: 12px 16px;
+    color: var(--baseTextLightColor);
+    padding: 10 px 16px;
+    width: 220px;
     display: block;
-    text-align: left;
+    text-align: center;
     font-size: 1rem;
     border-radius: var(--borderRadius);
     transition: .3s;
@@ -568,6 +584,7 @@ footer .copyright {
     padding: 20px;
     animation: bounce 2s infinite;
     transition: opacity 0.5s ease, visibility 0.5s ease;
+    min-width: unset;
 }
 
 .scrollIndicator.hidden {
@@ -582,7 +599,7 @@ footer .copyright {
 }
 
 .landingpage .hrLogo,
-.fruLogo {
+.landingpage .fruLogo {
     width: 150px;
     height: 150px;
     object-fit: cover;
@@ -625,7 +642,7 @@ footer .copyright {
 }
 
 .bryghusOverview img {
-    height: 180px;
+    height: 140px;
     object-fit: cover;
 }
 
@@ -794,45 +811,55 @@ footer .copyright {
 
 
 /* --- FRU. SØGAARD --- */
-.fru .introImgContainer {
+.fru .introImgContainer, .hr .introImgContainer{
     position: relative;
 }
 
-.fru .intro .fruLogo {
+.fru .intro .fruLogo, .hr .intro .hrLogo{
+    position: absolute;
     bottom: -20px;
     right: -60px;
+    width: 150px;
+    height: 150px;
 }
 
-.fruOverview {
+
+.fruOverview, .hrOverview{
     grid-template-columns: unset;
     text-align: center;
     gap: var(--gapSpacing);
 }
 
-.fruOverview .contentContainer {
+.fruOverview .contentContainer, .hrOverview .contentContainer  {
     display: flex;
     justify-content: space-between;
     padding: 0 100px;
 }
 
-.fruOverview article {
+.hrOverview .contentContainer{
+    padding: 0;
+    gap: 15px;
+}
+
+.fruOverview article, .hrOverview article {
     max-width: 260px;
 }
 
-.fruOverview h3 {
+.fruOverview h3, .hrOverview h3 {
     font-family: var(--baseTextFont)
 }
 
-.fruOverview p {
+.fruOverview p, .hrOverview p {
     margin-top: 05px;
 }
 
-.fruOverview img {
-    width: 260px;
-    height: 260px;
+.fruOverview img, .hrOverview img{
+    width: 250px;
+    height: 250px;
     border-radius: var(--round);
     object-fit: cover;
 }
+
 
 .fru .bentoBox {
     grid-template-columns: repeat(6, 1fr);
@@ -886,12 +913,137 @@ footer .copyright {
     background: var(--fruSoegaardLightColor);
 }
 
-.fru .collageImgSect img {
+.hr .fep .textContainer{
+    background: var(--hrSoegaardLightColor);
+}
+.hr .fep .imgContainer{
+margin-left: 20%;
+}
+
+.fru .collageImgSect img, .hr .collageImgSect img {
     width: 50%;
     height: 450px;
     object-fit: cover;
 
 }
+
+
+
+.hr .hrMenu {
+display: flex;
+flex-direction: column;
+
+}
+
+.hr .hrMenu .imgContainer{
+    display: flex;
+    gap: var(--gapSpacing);
+    margin: var(--gapSpacing);
+}
+
+.hr .hrMenu .imgContainer img{
+   width: calc(100% / 3 - 32px);
+   height: 550px;
+   object-fit: cover;
+}
+/* --- ØLSMAGNING --- */
+
+.olsmagning .collageImgSect .imgContainer{
+    flex-direction: column;
+}
+
+.olsmagning .collageImgSect .imgContainer img{
+    width: 650px;
+    height: 250px;
+    object-fit: cover;
+
+}
+
+.olsmagning .collageImgSect .imgContainer img:nth-child(2) {
+    margin-top: 0;
+    margin-right: 150px ;
+
+}
+.olsmagspakken {
+    position: relative; 
+    z-index: 1; 
+}
+
+/* .olsmagspakken {
+    background-image: url('/assets/img/olsmagning/clausTesteren.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 100vw;
+    margin: 0;
+    display: grid;
+    grid-column: 1 / -2;
+    position: relative; 
+    z-index: -1; 
+} */
+
+.olsmagspakkenHeroimg{
+   width: 200vh;
+}
+
+.olsmagspakken article {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 2; 
+}
+
+.olsmagspakken ul.button {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
+    position: relative;
+    align-items: center;
+}
+
+.olsmagspakken button{
+    margin-bottom: 1rem;
+  
+}
+
+
+
+.gulboks {
+    background-color: var(--accentColor);
+    padding: 1rem;
+    border-radius: var(--borderRadius);
+    color: var(--secondaryLightColor);
+    flex-grow: 1;
+    width: 25rem;
+    position: relative;
+}
+
+.lilleclaus, .storeclaus, .planken, .testeren {
+    display: none;
+}
+
+.lilleclaus {
+    display: block; 
+}
+
+.olsmagspakken p{
+    color: var(--baseTextLightColor);
+    font-size: 1rem;
+}
+
+.pris{
+    font-weight: bold;
+    font-style: italic;
+}
+
+.beerwalk a{
+    color: var(--hrSoegaardDarkColor);
+    text-decoration: underline;
+}
+
 
 /* --- ANIMATIONS --- */
 
@@ -930,7 +1082,7 @@ footer .copyright {
 
 
 /* --- MOBILE --- */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
 
     main {
         grid-template-columns: 15px repeat(4, 1fr) 15px;
@@ -984,6 +1136,10 @@ footer .copyright {
         background: none;
         border: none;
         cursor: pointer;
+        min-width: unset;
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
     }
 
     .topnavMobile .btn {
@@ -1050,6 +1206,9 @@ footer .copyright {
         margin-left: 15px;
     }
 
+    .dropdown .dropbtn, .dropdown .dropdown-content a{
+        text-align: left;
+    }
     .openIndicator {
         display: none;
     }
@@ -1252,24 +1411,24 @@ footer .copyright {
     }
 
     /* --- FRU. SØGAARD --- */
-    .fru .intro .fruLogo {
+    .fru .intro .fruLogo, .hr .intro .hrLogo {
         bottom: -50px;
         right: 0;
         width: 130px;
         height: 130px;
     }
 
-    .fruOverview .contentContainer {
+    .fruOverview .contentContainer, .hrOverview .contentContainer{ 
         padding: 0;
         flex-direction: column;
         gap: 15px;
     }
 
-    .fruOverview h3 {
+    .fruOverview h3, .hrOverview h3 {
         margin-top: 0;
     }
 
-    .fruOverview img {
+    .fruOverview img, .hrOverview img {
         border-radius: var(--round);
         object-fit: cover;
     }
@@ -1327,4 +1486,23 @@ footer .copyright {
     .collageImgSect .imgContainer {
         display: none;
     }
+
+    .hr .hrMenu .imgContainer img{
+        border-radius: 5px;
+        width: calc(100% / 3 - 5px);
+        height: 200px;
+    }
+
+    .hr .hrMenu .imgContainer{
+        gap: 5px;
+        margin: 0;
+
+    }
+
+   .hr .fep .imgContainer{
+        margin-left: 0;
+    }
+
+    /* --- ØLSMAGNING --- */
+    
 }

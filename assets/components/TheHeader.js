@@ -2,7 +2,8 @@
 const landingpage = "index.html";
 const fruSoegaard = "frusoegaard.html"
 const hrSoegaard = "hrsoegaard.html"
-const selskaber = "selskaber.html"
+const selskaber = "selskaber.html" 
+const olsmagning = "olsmagning.html"
 const Navigation = {
     template: `
      <header>
@@ -36,7 +37,7 @@ const Navigation = {
                     <div class="dropdown-content">
                         <a href="${selskaber}">Selskaber</a>
                         <a href="#">Hele Svineriet</a>
-                        <a href="#">Ølsmagning</a>
+                        <a href="${olsmagning}">Ølsmagning</a>
                         <a href="#">Øl med hjem</a>
                     </div>
                 </div>
@@ -81,7 +82,7 @@ const Navigation = {
                     <div class="dropdown-content">
                         <a href="${selskaber}">Selskaber</a>
                         <a href="#">Hele Svineriet</a>
-                        <a href="#">Ølsmagning</a>
+                        <a href="${olsmagning}">Ølsmagning</a>
                         <a href="#">Øl med hjem</a>
                     </div>
                 </div>

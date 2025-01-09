@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="-" />
+    <!--UPDATE-->
+    <meta name="keywords" content="-" />
+    <!--UPDATE-->
+
+    <title>Ølsmagning - Søgaards Bryghus</title>
+    <!--UPDATE-->
+
+    <link rel="icon" type="image/x-icon" href="./assets/img/SB_logo_grøn.png" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Imports of Vue things -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.41/dist/vue.global.js"></script>
+
+    <!-- Imports of components -->
+    <script type="module" src="./assets/components/TheHeader.js"></script>
+    <script type="module" src="./assets/components/TheFooter.js"></script>
+    <script type="module" src="./assets/components/Hero.js"></script>
+    <script
+      type="module"
+      src="./assets/components/FEPImageWithTextbox.js"
+    ></script>
+
+    <!-- Create Vue-applikationen -->
+    <script type="module" src="./assets/javascript/app.js" defer></script>
+
+    <script src="./assets/javascript/script.js" defer></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <Navigation></Navigation>
+
+      <main class="olsmagning">
+        <hero-component
+          :image-url="'./assets/img/olsmagning/olsmagning.jpg'"
+          :alt-text="'skåles af en gruppe'"
+        ></hero-component>
+
+        <section class="collageImgSect">
+          <div class="imgContainer">
+            <img
+              src="./assets/img/olsmagning/clausbryggeri1.jpg"
+              alt="claus snakker om bryggeriet"
+            />
+            <img
+              src="./assets/img/olsmagning/olsmagningpaHr.jpg"
+              alt="ølsmagning af 8 øl"
+            />
+          </div>
+          <div>
+            <h1>Ølsmagning</h1>
+            <p>
+              Invitér venner, kolleger eller familie til en ølsmagning, hvor I
+              udforsker husets bedste bryg og lærer om forskellen på over- og
+              undergæret øl. Nyd smagsoplevelser krydret med spændende historier
+              og en rundvisning i bryggeriet. Foretrækker I, at vi kommer til
+              jer? Vi tilbyder private ølsmagninger og leverer øl direkte til
+              jeres arrangement – ideelt til firmafester, fødselsdage eller
+              andre særlige lejligheder.
+            </p>
+            <div class="btnFlex">
+              <a href="#" class="btn">Se ølkort menu</a>
+              <a href="#" class="btn">Book ølsmagning</a>
+            </div>
+          </div>
+        </section>
+        <section class="olsmagspakken">
+          <div class="olsmagspakkenHero">
+            <img
+              class="olsmagspakkenHeroimg"
+              src="./assets/img/olsmagning/clausTesteren.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <h2>Dyk ned i vores ølsmagningspakker</h2>
+            <article>
+              <ul class="button">
+                <li>
+                  <button data-target="lilleclaus">Lille Claus</button>
+                </li>
+                <li>
+                  <button data-target="storeclaus">Store Claus</button>
+                </li>
+                <li>
+                  <button data-target="planken">Planken</button>
+                </li>
+                <li>
+                  <button data-target="testeren">Testeren</button>
+                </li>
+              </ul>
+              <div class="gulboks">
+                <div class="lilleclaus article-content">
+                  <h4>Lille Claus - Ølsmagning inkl. rundvisning</h4>
+                  <p>
+                    Rundvisning i bryggeriet – ca. 30 min. Ølsmagning af 3
+                    forskellige øl (20 cl) TILKØB: 2 slags snacks – pr. pers.
+                    +20,- Denne ølsmagning skal forudbestilles
+                  </p>
+                  <p class="pris">
+                    Pris pr. kuvert / kr. 195,- (min. 8 personer)
+                  </p>
+                </div>
+                <div class="storeclaus article-content" style="display: none">
+                  <h4>Store Claus</h4>
+                  <p>
+                    Smag 3 øl (20 cl) Vælg mellem Cæsarsalat, Bryggerens Burger
+                    eller Fish & Chips (vegetarisk muligt)
+                  </p>
+                  <p class="pris">
+                    Pris: 345,- pr. kuvert (min. 8 personer) Maden bestilles ved
+                    ankomst – forudbestilling nødvendig.
+                  </p>
+                </div>
+                <div class="planken article-content" style="display: none">
+                  <h4>Planken</h4>
+                  <p>
+                    Forkæl jer selv med en ølplanke – vælg mellem 8 eller 12
+                    glas á 0,2 l.
+                  </p>
+                  <p class="pris">
+                    Lille planke / kr. 315,-
+                    <br />
+                    Stor planke / kr. 465,-
+                  </p>
+                </div>
+                <div class="testeren article-content" style="display: none">
+                  <h4>Testeren</h4>
+                  <p>
+                    Er I på udkig efter den helt rigtige øl men er i tvivl om,
+                    hvilken type I skal vælge? Så er vores tester lige noget for
+                    jer.
+                  </p>
+                  <p class="pris">6 smagsprøver á 4 cl / kr. 60,-</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="beerwalk">
+          <div class="introImgContainer">
+            <img
+              src="./assets/img/olsmagning/beerwalk.jpg"
+              alt="Gruppe der sidder og får øl"
+            />
+          </div>
+          <div>
+            <h1>Aalborg Beerwalk</h1>
+            <p>
+              Vi er stolte medlemmer af Visit Aalborgs Beerwalk! Aalborg
+              Beerwalk er en sjov og smagfuld oplevelse i hjertet af Aalborg,
+              hvor du kan udforske byens bedste ølbarer i dit eget tempo Læg
+              vejen forbi os og brug én eller flere af dine værdikuponer til
+              ølsmagning på Søgaards Bryghus. For kun 175 kr. kan du vælge frit
+              blandt vores fadøl. Du kan også købe Beerwalken direkte hos os.
+            </p>
+            <a href="https://beerwalk.dk/beerwalk/"
+              >Læs mere om Aalborg Beerwalk</a
+            >
+          </div>
+        </section>
+      </main>
+
+      <the-footer></the-footer>
+    </div>
+  </body>
+</html>

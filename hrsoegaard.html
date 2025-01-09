@@ -1,50 +1,154 @@
 <!DOCTYPE html>
 <html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="-" />
+    <!--UPDATE-->
+    <meta name="keywords" content="-" />
+    <!--UPDATE-->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="-"> <!--UPDATE-->
-    <meta name="keywords" content="-"> <!--UPDATE-->
+    <title>Hr. Søgaard - Søgaards Bryghus</title>
+    <!--UPDATE-->
 
-    <title>Document</title> <!--UPDATE-->
+    <link rel="icon" type="image/x-icon" href="./assets/img/SB_logo_grøn.png" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./assets/javascript/script.js" defer></script>
 
-    <link rel="icon" type="image/x-icon" href="./assets/img/SB_logo_grøn.png">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- Imports of Vue things -->
     <script src="https://cdn.jsdelivr.net/npm/vue@3.2.41/dist/vue.global.js"></script>
 
     <!-- Imports of components -->
     <script type="module" src="./assets/components/TheHeader.js"></script>
-    <script type="module" src="./assets/components/BasicBtn.js"></script>
     <script type="module" src="./assets/components/TheFooter.js"></script>
-
+    <script type="module" src="./assets/components/Hero.js"></script>
+    <script
+      type="module"
+      src="./assets/components/FEPImageWithTextbox.js"
+    ></script>
 
     <!-- Create Vue-applikationen -->
     <script type="module" src="./assets/javascript/app.js" defer></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="app">
-        <!-- Her vil navbaren blive indsat -->
-        <Navigation></Navigation>
+      <Navigation></Navigation>
 
-        <main>
-            <!-- Din øvrige statiske indhold her -->
-            <h1>Hr. Søgaard!</h1>
+      <main class="hr">
+        <hero-component
+          :image-url="'./assets/img/hr-soegaard/hrhero.jpg'"
+          :alt-text="'skåles af en gruppe'"
+        ></hero-component>
 
-        </main>
+        <section class="intro">
+          <div class="introImgContainer">
+            <img src="./assets/img/hr-soegaard/hrIntro.jpg" alt="gruppeHr" />
+            <img
+              src="./assets/img/Hr_sogaard_logo_gron_rundt.png"
+              class="hrLogo"
+              alt=""
+            />
+          </div>
+          <div>
+            <h1>Hr. Søgaard</h1>
+            <p>
+              Velkommen indenfor i en af Aalborgs hyggeligste pub, Missing Bell
+              Brewpub – som har eksisteret siden år 2014. Som den eneste pub i
+              hele Aalborg med eget bryggeri, kan vi byde velkommen i baren til
+              24 forskellige haner med hjemmebrygget øl. Dog tilbyder vi ikke
+              kun på øl i pubben, men også godt 70 siddepladser, hvor der både
+              kan nydes øl og mad fra samme menu som resten af huset.
+            </p>
+          </div>
+        </section>
 
-        <the-footer></the-footer>
+        <section class="hrOverview">
+          <h1>Hr. Søgaard tilbyder</h1>
+          <div class="contentContainer">
+            <article>
+              <img
+                src="./assets/img/hr-soegaard/Søgaards_-21.jpg"
+                alt="skænker øl"
+              />
+              <h3 class="bold">24 slags øl</h3>
+              <p>Smag dig gennem vores udvalg.</p>
+            </article>
+            <article>
+              <img
+                src="./assets/img/hr-soegaard/sportsskarme.jpg"
+                alt="Fodboldskærm"
+              />
+              <h3 class="bold">Sportskampe på storskærme</h3>
+              <p>Oplev kampene live med vennerne.</p>
+            </article>
+            <article>
+              <img src="./assets/img/hr-soegaard/burger.jpg" alt="burger" />
+              <h3 class="bold">Mad med øl</h3>
+              <p>Unikke retter med øl som smagsgiver.</p>
+            </article>
+            <article>
+              <img
+                src="./assets/img/hr-soegaard/Søgaards_-78.jpg"
+                alt="pubstemning"
+              />
+              <h3 class="bold">Hyggelig pubstemning</h3>
+              <p>Autentiske rammer til enhver anledning.</p>
+            </article>
+          </div>
+        </section>
 
+        <section class="collageImgSect">
+          <div class="imgContainer">
+            <img src="./assets/img/hr-soegaard/olfokus.jpg" alt="øl billede" />
+            <img
+              src="./assets/img/hr-soegaard/oktoberfest.jpg"
+              alt="oktoberfest"
+            />
+          </div>
+          <div>
+            <h1>En pub med sjæl og historie</h1>
+            <p>
+              Vi har indrettet vores pub i traditionel stil med originalt
+              inventar fra en kirke i Nordengland. Det eneste, vi ikke kunne
+              tage med hjem, var den originale kirkeklokke, hvilket inspirerede
+              navnet Missing Bell.
+            </p>
+          </div>
+        </section>
+        <section class="hrMenu">
+          <h1>Nyd smagsfulde retter med øl som ingrediens</h1>
+          <div class="imgContainer">
+            <img
+              src="./assets/img/hr-soegaard/kodpommes.jpg"
+              alt="kød med pommes"
+            />
+            <img src="./assets/img/hr-soegaard/laks.jpg" alt="Lakseret" />
+            <img src="./assets/img/hr-soegaard/gryderet.jpg" alt="Gryderet" />
+          </div>
+          <a href="#" class="hrBtn btn">Se menukortet</a>
+        </section class>
+        <F-E-P-Img-With-Text
+          :image-url="'./assets/img/hr-soegaard/clausBryggeri.jpg'"
+          :image-alt="'Claus der står i bryggeriet'"
+          :heading="'Ølsmagning'"
+          :description="'Hos Søgaards Bryghus kan du selvfølgelig også komme til ølsmagning og afprøve alle vores smagsfulde øl. Vi har flere forskellige pakker, så du kan vælge lige den der passer til dig.'"
+          :link-text="'Læs mere om ølsmagning'"
+          :link-href="'olsmagning.html'"
+          :extra-classes="'hrBtn'"
+        >
+        </F-E-P-Img-With-Text>
+      </main>
+
+      <the-footer></the-footer>
     </div>
-
-
-
-</body>
-
+  </body>
 </html>

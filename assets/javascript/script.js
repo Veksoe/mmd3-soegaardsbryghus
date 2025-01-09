@@ -107,3 +107,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1000); // Matcher transitionens længste varighed
     });
 });
+
+// ØLSMAGNING KNAP TIL AT VISE INDHOLD*//
+document.querySelectorAll('.button button').forEach(button => {
+    button.addEventListener('click', () => {
+      // Skjul alle artikler
+      document.querySelectorAll('.article-content').forEach(article => {
+        article.style.display = 'none';
+      });
+  
+      // Vis den artikel, der svarer til den trykkede knap
+      const target = button.getAttribute('data-target');
+      const articleToShow = document.querySelector(`.${target}`);
+      if (articleToShow) {
+        articleToShow.style.display = 'block';
+      }
+    });
+  });
+  
