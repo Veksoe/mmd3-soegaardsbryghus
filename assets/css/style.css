@@ -992,6 +992,10 @@ footer .copyright {
 
 }
 
+.olsmagspakker img {
+    display: none;
+}
+
 .olsmagning .olsmagspakkenContainer {
     background-image: url("../img/olsmagning/clausTesteren.png");
     grid-template-columns: unset;
@@ -999,7 +1003,6 @@ footer .copyright {
     background-position: center;
     background-repeat: no-repeat;
     height: 700px;
-
 }
 
 .olsmagspakker {
@@ -1152,6 +1155,16 @@ footer .copyright {
         margin-bottom: var(--gapSpacing);
     }
 
+    a.btn,
+    button {
+        width: 100%;
+    }
+
+    header a.btn,
+    header button {
+        width: unset;
+    }
+
     h1 {
         font-size: 1.7rem;
     }
@@ -1218,7 +1231,6 @@ footer .copyright {
         z-index: 10;
         overflow-y: auto;
         max-height: 100%;
-
     }
 
     .topnavMobile .side-menu.open {
@@ -1232,6 +1244,8 @@ footer .copyright {
         font-size: 2.3rem;
         cursor: pointer;
         color: var(--baseTextLightColor);
+        min-width: unset;
+        box-shadow: unset;
     }
 
     .topnavMobile .logo {
@@ -1454,10 +1468,11 @@ footer .copyright {
 
     .carousel a.btn {
         bottom: 40px;
+        width: unset;
     }
 
     .carousel-controls {
-        bottom: -25px;
+        bottom: -40px;
         top: unset;
         width: 50%;
         margin: 0 25%;
@@ -1567,5 +1582,36 @@ footer .copyright {
     }
 
     /* --- ØLSMAGNING --- */
+    .olsmagning .olsmagspakkenContainer {
+        background-image: none;
+        height: unset;
+    }
 
+    .olsmagspakker {
+        width: unset;
+        margin: unset;
+    }
+
+    .olsmagspakker img {
+        display: block;
+        object-fit: cover;
+        object-position: left;
+    }
+
+    .olsmagspakker article {
+        flex-direction: column;
+    }
+
+    .olsmagspakker .btnContainer {
+        width: 95%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        column-gap: 15px;
+    }
+
+    .olsmagspakker .btnContainer button {
+        min-width: unset;
+        width: calc(100% / 2 - 15px);
+    }
 }
