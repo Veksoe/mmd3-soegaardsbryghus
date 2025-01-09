@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (scrollIndicatorEl) {
         // Hide scrollIndicatorEl when scrolled down
         window.addEventListener('scroll', () => {
-            // Checks, is scrollY is above 200px
+            // Checks, if scrollY is above 200px
             if (window.scrollY > 200) {
                 scrollIndicatorEl.classList.add('hidden');
             } else {

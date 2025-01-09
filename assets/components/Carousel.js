@@ -14,7 +14,7 @@ const Carousel = {
                                 <p>Vi har også daglige kage overraskelser! Se i kagemontren eller spørg betjeningen for at høre mere.</p>
                                 <a href="#" class="btn">Se hele menukortet</a>
                             </div>
-                            <img src="./assets/img/index/cake-outside.jpg" alt="Slide 1">
+                            <img src="./assets/img/index/cake-outside.jpg" alt="Jorbærtoppe med torvet i baggrunden">
                         </div>
                     </div>
 
@@ -29,7 +29,7 @@ const Carousel = {
                                 <div><p>Drunken Beer Pot  </p><p>KR. 195,-</p></div>
                                 <a href="#" class="btn">Se hele menukortet</a>
                             </div>
-                            <img src="./assets/img/index/burger.jpg" alt="Slide 1">
+                            <img src="./assets/img/index/burger.jpg" alt="Burger">
                         </div>
                     </div>
 
@@ -43,7 +43,7 @@ const Carousel = {
                                 <div><p>Lille planke m. frit valg på 8 forskellige øl fra øltavlen</p><p>KR. 315,-</p></div>
                                 <a href="#" class="btn">Se hele menukortet</a>
                             </div>
-                            <img src="./assets/img/index/drunken-beer-pot.jpg" alt="Slide 1">
+                            <img src="./assets/img/index/drunken-beer-pot.jpg" alt="Drunken Beer Pot med pomfritter til">
                         </div>
                     </div>
                     <div class="carousel-slide" :class="{'active': currentSlide === 3, 'inactive': currentSlide !== 3}">
@@ -67,7 +67,7 @@ const Carousel = {
                                 </div>
                                 <a href="#" class="btn">Se hele menukortet</a>
                             </div>
-                            <img src="./assets/img/index/meat-and-potato.jpg" alt="Slide 1">
+                            <img src="./assets/img/index/meat-and-potato.jpg" alt="Flot anrettet kød med pommes Anna til">
                         </div>
                     </div>
                 </div>
